@@ -177,3 +177,47 @@ header nav ul li a:hover {
     padding-bottom: 10px;
     border-bottom: 1px solid #db8e93;
 }
+
+.menu {
+    max-width: 1500px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: #fff7ea;
+    padding: 40px;
+    border-radius: 10px 10px 0 0;
+}
+.menu h2 {
+    font-size: 50px;
+    color: #204625;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.menu table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.menu table td, .menu table th {
+    border: 1px solid gray;
+    padding: 10px;
+}
+.center-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.menu table thead {
+    background-color: #204625;
+    color: #f6efe3;
+}
+
+.menu table tbody {
+    color: #68504b;
+    font-weight: bold;
+}
