@@ -54,7 +54,7 @@ header nav ul li a:hover {
     max-width: 1500px;
     margin: 30px auto 0;
     padding: 20px;
-    /* background-color: red; */
+    background-color: #fff7ea;
     display: flex;
     -webkit-box-shadow: 1px 2px 16px 1px #000000;
     box-shadow: 1px 2px 16px 1px #000000;
@@ -109,4 +109,71 @@ header nav ul li a:hover {
 .hero figure img {
     width: 100%;
     border-radius: 0 30px 30px 0;
+}
+
+.abt-us {
+    max-width: 1500px;
+    margin: 30px auto 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.abt-us article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #785d56;
+}
+
+.abt-us article h2 {
+    font-size: 40px;
+}
+
+.abt-us article p {
+    font-weight: bold
+}
+
+.abt-us figure {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.abt-us figure img {
+    border-radius: 20px;
+}
+
+.abt-us figure img {
+    width: 100%;
+}
+
+.abt-us aside {
+    background-color: #f6efe3;
+    width: 300px;
+    border: solid 1px #eee2cd;
+    padding: 30px;
+}
+
+.abt-us aside h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #204625;
+    gap: 10px;
+} 
+
+.abt-us aside dl {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    color: #785d56;
+}
+
+.abt-us aside dl dd {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #db8e93;
 }
