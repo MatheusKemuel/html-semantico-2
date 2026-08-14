@@ -14,9 +14,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 5px 100px;
-    background-color: #e6d5c1;
-    /* position: fixed;
-    width: 100%; */
+    background: #E6D5C1;
+    background: linear-gradient(180deg, rgba(230, 213, 193, 1) 54%, rgba(255, 244, 227, 1) 100%);
 }
 
 header figure img {
@@ -44,17 +43,20 @@ header nav ul li a {
     color: #785d56;
     font-weight: bold;
     transition: ease .2s;
+    padding: 10px;
 }
 
 header nav ul li a:hover {
     color: #be4c54;
+    background-color: #f6efe3;
+    border-radius: 10px;
 }
 
 .hero {
     max-width: 1500px;
     margin: 30px auto 0;
     padding: 20px;
-    /* background-color: red; */
+    background-color: #fff7ea;
     display: flex;
     -webkit-box-shadow: 1px 2px 16px 1px #000000;
     box-shadow: 1px 2px 16px 1px #000000;
@@ -109,4 +111,174 @@ header nav ul li a:hover {
 .hero figure img {
     width: 100%;
     border-radius: 0 30px 30px 0;
+}
+
+.abt-us {
+    max-width: 1500px;
+    margin: 30px auto 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.abt-us article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #785d56;
+}
+
+.abt-us article h2 {
+    font-size: 40px;
+}
+
+.abt-us article p {
+    font-weight: bold
+}
+
+.abt-us figure {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.abt-us figure img {
+    border-radius: 20px;
+}
+
+.abt-us figure img {
+    width: 100%;
+}
+
+.abt-us aside {
+    background-color: #f6efe3;
+    width: 300px;
+    border: solid 1px #eee2cd;
+    padding: 30px;
+}
+
+.abt-us aside h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #204625;
+    gap: 10px;
+}
+
+.abt-us aside dl {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    color: #785d56;
+}
+
+.abt-us aside dl dd {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #db8e93;
+}
+
+.menu {
+    max-width: 1500px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: #fff7ea;
+    padding: 40px;
+    border-radius: 10px 10px 0 0;
+}
+
+.menu h2 {
+    font-size: 50px;
+    color: #204625;
+    width: 100%;
+    text-align: center;
+
+}
+
+.menu table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.menu table td,
+.menu table th {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+.center-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu table thead {
+    background-color: #204625;
+    color: #f6efe3;
+}
+
+.menu table tbody {
+    color: #68504b;
+    font-weight: bold;
+}
+
+.faq {
+    max-width: 1500px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq h3 {
+    font-size: 30px;
+    color: #204625;
+}
+
+.faq aside {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.faq details {
+    overflow: hidden;
+    border: 1px solid #dfd6c7;
+    border-radius: 8px;
+    background-color: #fffaf1;
+    box-shadow: 0 3px 10px rgba(55, 35, 20, 0.06);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq details:hover {
+    border-color: #c85a35;
+}
+
+.faq details[open] {
+    border-color: #c85a35;
+    box-shadow: 0 5px 18px rgba(55, 35, 20, 0.1);
+}
+
+.faq summary {
+    position: relative;
+    padding: 20px 60px 20px 22px;
+    color: #2d211b;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.faq details p {
+    padding: 18px 22px;
+    color: #62564e;
+    line-height: 1.7;
 }
