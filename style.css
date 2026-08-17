@@ -5,6 +5,10 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #fff4e3;
 }
@@ -68,7 +72,8 @@ header nav ul li a:hover {
     flex-direction: column;
     gap: 50px;
     padding: 80px 30px;
-    min-width: 800px;
+    max-width: 800px;
+    width: 100%;
 }
 
 .hero article h1 {
@@ -180,6 +185,10 @@ header nav ul li a:hover {
     border-bottom: 1px solid #db8e93;
 }
 
+.abt-us aside p {
+    color: #62564e;
+}
+
 .menu {
     max-width: 1500px;
     margin: 30px auto 0;
@@ -281,4 +290,260 @@ header nav ul li a:hover {
     padding: 18px 22px;
     color: #62564e;
     line-height: 1.7;
+}
+
+.reservation {
+    max-width: 1500px;
+    margin: 30px auto 30px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-wrapper {
+    max-width: 900px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 4px 20px 5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 4px 20px 5px rgba(0, 0, 0, 0.5);
+}
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    border: none;
+}
+
+.input-wrapper input {
+    background-color: #fffaf1;
+    height: 40px;
+    width: 240px;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid #E6D5C1;
+}
+
+.form-wrapper h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #204625;
+}
+
+.form-wrapper h3 {
+    font-size: 20px;
+    color: #204625;
+    margin: 20px 0 20px 0;
+}
+
+.form button {
+    background-color: #be4c54;
+    max-width: 220px;
+    height: 40px;
+    color: #fff4e3;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    border-radius: 10px;
+    transition: ease .3s;
+    font-weight: bold;
+}
+
+.form textarea {
+    border-radius: 10px;
+    background-color: #fffaf1;
+    border: 1px solid #E6D5C1;
+}
+
+.dialog {
+    display: none;
+    position: fixed;
+    inset: 50% auto auto 50%;
+    margin: 0;
+    padding: 32px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fffaf1;
+    color: #2d211b;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+
+.dialog:target {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dialog h2 {
+
+    color: #244d32;
+}
+
+.dialog p {
+    margin-bottom: 24px;
+
+}
+
+.btn-dialog,
+.btn-fechar {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 6px;
+    background-color: #c85a35;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    height: 45px;
+}
+
+.btn-fechar {
+    background-color: #244d32;
+}
+
+.reservation aside {
+    background-color: #f6efe3;
+    width: 300px;
+    border: solid 1px #eee2cd;
+    padding: 30px;
+    height: 350px;
+}
+
+.reservation aside h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #204625;
+    gap: 10px;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.location ul {
+    border-top: 1px solid #E6D5C1;
+
+}
+
+.location ul li {
+    list-style: none;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #E6D5C1;
+}
+
+footer figure img {
+    width: 100px;
+}
+
+.footer-up {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-up a {
+    text-decoration: none;
+    background-color: #c85a35;
+    padding: 20px;
+    border-radius: 20px;
+    color: #fffaf1;
+    font-size: larger;
+}
+
+footer p {
+    color: #68504b;
+}
+
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .abt-us {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero article {
+        align-items: center;
+    }
+
+    .hero article a {
+        font-size: large;
+        padding: 10px;
+    }
+
+    .hero figure img {
+        border-radius: 20px;
+    }
+
+    .reservation {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 850px) {
+    .form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .form {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .hero article h1 {
+        font-size: xx-large;
+
+    }
+
+    .hero article p {
+        font-size: large;
+
+    }
+}
+
+@media (max-width: 580px) {
+    .footer-up {
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    header nav ul {
+    gap: 10px;
+}
 }

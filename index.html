@@ -1,181 +1,383 @@
+<!-- a tag <doctype> avisa o navegador que a página usa a versão HTML5 -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
+
+<!-- a tag <head> é um contêiner invisível para metadados (dados sobre o documento) -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Café Aurora | Cafeteria e Restaurante</title>
 </head>
 
+<!-- a tag <body> define o corpo de uma página web -->
 <body>
+
+    <!--a tag <header> representa o cabeçalho principal da página. 
+    Foi usado para agrupar a logo e a navegação. 
+    Isso ajuda leitores de tela e mecanismos de busca a identificarem o cabeçalho.-->
+
     <header>
         <figure class="logo">
-            <img src="./assets/logo.png" alt="">
+            <img src="./assets/logo.png" alt="logo">
             <p>Café Aurora</p>
         </figure>
-        <nav>
+        <!--a tag <nav> representa um conjunto de links de navegação.
+    Foi usada para permitir o acesso as principais seções da página.
+    Leitores de tela podem identificar essa região como uma área de navegação.-->
+        <nav aria-label="Navegação principal">
+            <!-- ,a tag <ul>, ou lista desordenada, é um conjunto de itens(li) no fomarto de lista,
+              que nesse caso está sendo usado como itens de navegação do header -->
             <ul>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Cardápio</a></li>
-                <li><a href="">Reservas</a></li>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#abt-us">Sobre</a></li>
+                <li><a href="#menu">Cardápio</a></li>
+                <li><a href="#reservation">Reservas</a></li>
             </ul>
         </nav>
     </header>
-    <section class="hero">
-        <article>
-            <h1>Sabores que <br> contam histórias </h1>
-            <p>Do café da manhã ao jantar, cada prato é preparado <br> com ingredientes frescos e muito carinho para
-                tornar <br>
-                seu
-                momento inesquecível.</p>
-            <a href="">Faça sua reserva</a>
-        </article>
-        <figure>
-            <img src="./assets/56993_cafe.webp" alt="">
-        </figure>
-    </section>
-    <section class="abt-us">
-        <article>
-            <h2>Nossa história</h2>
-            <p>O Café Aurora nasceu em 2018 com um sonho sinmples: Criar um <br> lugar acolhedor onde boa comida e boas
-                conversar se encontram.</p>
-            <p>Inspirados pelas manhãs tranquilas e pelos primeiros raios de sol <br> que anunciam um novo dia, buscamos
-                trazer essa sensação de <br> renovação em cada detalhe da nossa casa.</p>
-            <p>Valorizamos produtores locais, receitas autorais e o atendiment <br> atencioso que faz você se sentir em
-                casa. Aqui, cada visita é <br> parte da nossa história.</p>
-        </article>
-        <figure>
-            <img src="./assets/fachada.png" alt="">
-            <p>Nossa fachada, onde tudo começou.</p>
-        </figure>
-        <aside>
-            <h3><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
-                    stroke="#204625" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-clock-icon lucide-clock">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M12 6v6l4 2" />
-                </svg>Horários</h3>
-            <dl>
-                <dt>Segunda a Sexta</dt>
-                <dd>7h ás 22h</dd>
-                <dt>Sábado</dt>
-                <dd>7h ás 22h</dd>
-                <dt>Domingo</dt>
-                <dd>7h ás 22h</dd>
-            </dl>
-        </aside>
-    </section>
-    <section class="menu">
-        <h2>Cardápio da semana</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Ítem</th>
-                    <th>Descrição</th>
-                    <th>Preço</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="center-icons"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-                            viewBox="0 0 24 24" fill="none" stroke="#be4c54" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="lucide lucide-coffee-icon lucide-coffee">
-                            <path d="M10 2v2" />
-                            <path d="M14 2v2" />
-                            <path
-                                d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1" />
-                            <path d="M6 2v2" />
-                        </svg>Café Coado Especial</td>
-                    <td>Grãos selecionados do Sul de Minas. Servido quente.</td>
-                    <td>R$ 12,00</td>
-                </tr>
-                <tr>
-                    <td class="center-icons"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-                            viewBox="0 0 24 24" fill="none" stroke="#be4c54" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="lucide lucide-croissant-icon lucide-croissant">
-                            <path d="M10.2 18H4.774a1.5 1.5 0 0 1-1.352-.97 11 11 0 0 1 .132-6.487" />
-                            <path d="M18 10.2V4.774a1.5 1.5 0 0 0-.97-1.352 11 11 0 0 0-6.486.132" />
-                            <path d="M18 5a4 3 0 0 1 4 3 2 2 0 0 1-2 2 10 10 0 0 0-5.139 1.42" />
-                            <path d="M5 18a3 4 0 0 0 3 4 2 2 0 0 0 2-2 10 10 0 0 1 1.42-5.14" />
-                            <path
-                                d="M8.709 2.554a10 10 0 0 0-6.155 6.155 1.5 1.5 0 0 0 .676 1.626l9.807 5.42a2 2 0 0 0 2.718-2.718l-5.42-9.807a1.5 1.5 0 0 0-1.626-.676" />
-                        </svg>Croissant na Manteiga</td>
-                    <td>Croissant artesanal acompanhado de geleia da casa.</td>
-                    <td>R$ 15,00</td>
-                </tr>
-                <tr>
-                    <td class="center-icons"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-                            viewBox="0 0 24 24" fill="none" stroke="#be4c54" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="lucide lucide-soup-icon lucide-soup">
-                            <path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z" />
-                            <path d="M7 21h10" />
-                            <path d="M19.5 12 22 6" />
-                            <path d="M16.25 3c.27.1.8.53.75 1.36-.06.83-.93 1.2-1 2.02-.05.78.34 1.24.73 1.62" />
-                            <path d="M11.25 3c.27.1.8.53.74 1.36-.05.83-.93 1.2-.98 2.02-.06.78.33 1.24.72 1.62" />
-                            <path d="M6.25 3c.27.1.8.53.75 1.36-.06.83-.93 1.2-1 2.02-.05.78.34 1.24.74 1.62" />
-                        </svg>Almoço Executivo</td>
-                    <td>Prato do dia com salada proteína e acompanhamento.</td>
-                    <td>R$ 34,90</td>
-                </tr>
-                <tr>
-                    <td class="center-icons"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-                            viewBox="0 0 24 24" fill="none" stroke="#be4c54" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="lucide lucide-salad-icon lucide-salad">
-                            <path d="M7 21h10" />
-                            <path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z" />
-                            <path
-                                d="M11.38 12a2.4 2.4 0 0 1-.4-4.77 2.4 2.4 0 0 1 3.2-2.77 2.4 2.4 0 0 1 3.47-.63 2.4 2.4 0 0 1 3.37 3.37 2.4 2.4 0 0 1-1.1 3.7 2.51 2.51 0 0 1 .03 1.1" />
-                            <path d="m13 12 4-4" />
-                            <path d="M10.9 7.25A3.99 3.99 0 0 0 4 10c0 .73.2 1.41.54 2" />
-                        </svg>Tagliatelle ao Funghi</td>
-                    <td>Massa fresca com molho cremoso de cogumelos.</td>
-                    <td>R$ 42,00</td>
-                </tr>
-                <tr>
-                    <td class="center-icons"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-                            viewBox="0 0 24 24" fill="none" stroke="#be4c54" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="lucide lucide-cake-slice-icon lucide-cake-slice">
-                            <path d="M16 13H3" />
-                            <path d="M16 17H3" />
-                            <path
-                                d="m7.2 7.9-3.388 2.5A2 2 0 0 0 3 12.01V20a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-8.654c0-2-2.44-6.026-6.44-8.026a1 1 0 0 0-1.082.057L10.4 5.6" />
-                            <circle cx="9" cy="7" r="2" />
-                        </svg>Bolo de Cenoura</td>
-                    <td>Com cobertura de chocolate 70% cacau.</td>
-                    <td>R$ 14,00</td>
-                </tr>
-            </tbody>
-            <tfoot>
 
-            </tfoot>
-        </table>
-    </section>
-    <section class="faq">
-        <h3>Perguntas frequentes</h3>
-        <aside>
-            <details>
-                <summary>É possível fazer reservas para grupos grandes?</summary>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae pariatur ab mollitia, voluptates
-                    neque nobis repellat, sapiente iusto dolores dicta deserunt ipsum officia maxime animi deleniti
-                    labore quasi, dolorum similique?</p>
-            </details>
-            <details>
-                <summary>Vocês oferecem opções vegetarianas ou veganas?</summary>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae pariatur ab mollitia, voluptates
-                    neque nobis repellat, sapiente iusto dolores dicta deserunt ipsum officia maxime animi deleniti
-                    labore quasi, dolorum similique?</p>
-            </details>
-            <details>
-                <summary>Aceitam pedido para eventos ou confraternizações?</summary>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae pariatur ab mollitia, voluptates
-                    neque nobis repellat, sapiente iusto dolores dicta deserunt ipsum officia maxime animi deleniti
-                    labore quasi, dolorum similique?</p>
-            </details>
-        </aside>
-    </section>
-    <footer></footer>
+    <!-- a tag <main> representa onde vai ficar o conteúdo principal da página,
+      todas as seções do site irão ficar dentro da tag main-->
+    <main>
+        <!-- a tag <section> determina justamente as seções da página,
+             ou seja, blocos de conteúdo que facilita a organização e a acessibilidade -->
+        <section class="hero" id="hero">
+            <!-- a tag <article> representa uma composição independente em um documento, página, aplicação, ou site-->
+            <article>
+                <!-- o <h1> faz parte de uma série de tags de título que obedecem uma hierarquia,
+                  sendo o h1 o nível mais alto dessa hierarquia e o h6 o mais baixo -->
+                <h1>Sabores que <br> contam histórias </h1>
+                <!-- a tag <p> de parágrafo é justamente um bloco de texto que vai ser exibido na tela -->
+                <p>Do café da manhã ao jantar, cada prato é preparado <br> com ingredientes frescos e muito carinho para
+                    tornar <br>
+                    seu
+                    momento inesquecível.</p>
+
+                <!-- a tag <a> representa um link que recebe o atribudo href,
+                      que é para onde o usuário sera direcionado quando clicar -->
+                <a href="#reservation">Faça sua reserva</a>
+            </article>
+
+            <!-- a tag semântica <figure> representa um conteúdo autocontido, como fotos, ilustrações, diagramas ou trechos de código -->
+            <figure>
+
+                <!-- a tag <img> exibe uma imagem na tela e recebe o atributo src, que é onde essa imagem está -->
+                <img src="./assets/56993_cafe.webp" alt="Xícara de café acompanhada de croissants">
+            </figure>
+        </section>
+        <section class="abt-us" id="abt-us">
+            <article>
+                <h2>Nossa história</h2>
+
+                <!-- tag <strong> define um texto com forte importância, seriedade ou urgência,
+                  ajudando leitores de tela e motores de busca -->
+                <p>O <strong>Café Aurora</strong> nasceu em 2018 com um sonho sinmples: Criar um <br> lugar <em>
+                        acolhedor </em>onde boa comida e
+                    boas
+                    conversar se encontram.</p>
+
+                <!-- a tag <em> marca o texto que tem ênfase -->
+                <p>Inspirados pelas manhãs tranquilas e pelos primeiros raios de sol <br> que anunciam um novo dia,
+                    buscamos
+                    trazer essa sensação de <br> renovação em cada detalhe da nossa casa.</p>
+                <p>Valorizamos produtores locais, receitas autorais e o atendimento <br> atencioso que faz você se
+                    sentir
+                    em
+                    casa. Aqui, cada visita é <br> parte da nossa história. </p>
+
+                <!-- a tag <br> quebra a linha de um texto -->
+                <p>Utilizamos grãos avaliados pela
+                    <!-- a tag <abbr> define uma abreviação ou sigla -->
+                    <abbr title="Associação Brasileira da Indústria de Café">ABIC</abbr>.
+                </p>
+            </article>
+            <figure>
+                <img src="./assets/fachada.png" alt="Imagem da fachada da cafeteria">
+
+                <!-- a tag <figcaption> serve para criar uma legenda descritiva visível para um elemento pai -->
+                <figcaption>Nossa fachada, onde tudo começou.</figcaption>
+            </figure>
+
+            <!-- a tag <aside> representa uma seção da página com conteúdo indiretamente relacionado ao contexto principal-->
+            <aside>
+                <h3><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                        stroke="#204625" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-clock-icon lucide-clock">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 6v6l4 2" />
+                    </svg>Horários</h3>
+
+                <!-- a tag <dl> cria uma lista de descrição ou definição -->
+                <dl>
+                    <dt>Segunda a Sexta</dt>
+                    <dd>7h ás 22h</dd>
+                    <dt>Sábado</dt>
+                    <dd>7h ás 22h</dd>
+                    <dt>Domingo</dt>
+                    <dd>7h ás 22h</dd>
+                </dl>
+                <p>
+                    Nosso próximo evento acontecerá em
+                    <!-- a tag <time> serve para indicar uma data, um horário ou uma duração de forma semântica -->
+                    <time datetime="2026-09-12T19:00">
+                        12 de setembro de 2026, às 19h
+                    </time>.
+                </p>
+            </aside>
+        </section>
+        <section class="menu" id="menu">
+            <h2>Cardápio da semana</h2>
+
+            <!-- a tag <table> serve para criar tabelas em HTML -->
+            <table aria-describedby="descricao-cardapio">
+                <!-- a tag <caption> adiciona uma legenda à tabela -->
+                <caption>
+                    Pratos disponíveis e seus respectivos preços
+                </caption>
+
+                <!-- a tag <thead> é o cabeçalho da tabela -->
+                <thead>
+                    <tr>
+                        <th>Ítem</th>
+                        <th>Descrição</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+
+                <!-- a tag <tbody> é o corpo da tabela-->
+                <tbody>
+                    <tr>
+                        <td class="center-icons"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                viewBox="0 0 24 24" fill="none" stroke="#be4c54" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-coffee-icon lucide-coffee">
+                                <path d="M10 2v2" />
+                                <path d="M14 2v2" />
+                                <path
+                                    d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1" />
+                                <path d="M6 2v2" />
+                            </svg>Café Coado Especial</td>
+                        <td>Grãos selecionados do Sul de Minas. Servido quente.</td>
+                        <td><mark>R$ 12,00</mark></td>
+                    </tr>
+                    <tr>
+                        <td class="center-icons"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                viewBox="0 0 24 24" fill="none" stroke="#be4c54" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-croissant-icon lucide-croissant">
+                                <path d="M10.2 18H4.774a1.5 1.5 0 0 1-1.352-.97 11 11 0 0 1 .132-6.487" />
+                                <path d="M18 10.2V4.774a1.5 1.5 0 0 0-.97-1.352 11 11 0 0 0-6.486.132" />
+                                <path d="M18 5a4 3 0 0 1 4 3 2 2 0 0 1-2 2 10 10 0 0 0-5.139 1.42" />
+                                <path d="M5 18a3 4 0 0 0 3 4 2 2 0 0 0 2-2 10 10 0 0 1 1.42-5.14" />
+                                <path
+                                    d="M8.709 2.554a10 10 0 0 0-6.155 6.155 1.5 1.5 0 0 0 .676 1.626l9.807 5.42a2 2 0 0 0 2.718-2.718l-5.42-9.807a1.5 1.5 0 0 0-1.626-.676" />
+                            </svg>Croissant na Manteiga</td>
+                        <td>Croissant artesanal acompanhado de geleia da casa.</td>
+                        <td><mark>R$ 15,00</mark></td>
+                    </tr>
+                    <tr>
+                        <td class="center-icons"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                viewBox="0 0 24 24" fill="none" stroke="#be4c54" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-soup-icon lucide-soup">
+                                <path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z" />
+                                <path d="M7 21h10" />
+                                <path d="M19.5 12 22 6" />
+                                <path d="M16.25 3c.27.1.8.53.75 1.36-.06.83-.93 1.2-1 2.02-.05.78.34 1.24.73 1.62" />
+                                <path d="M11.25 3c.27.1.8.53.74 1.36-.05.83-.93 1.2-.98 2.02-.06.78.33 1.24.72 1.62" />
+                                <path d="M6.25 3c.27.1.8.53.75 1.36-.06.83-.93 1.2-1 2.02-.05.78.34 1.24.74 1.62" />
+                            </svg>Almoço Executivo</td>
+                        <td>Prato do dia com salada proteína e acompanhamento.</td>
+                        <td><mark>R$ 34,90</mark></td>
+                    </tr>
+                    <tr>
+                        <td class="center-icons"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                viewBox="0 0 24 24" fill="none" stroke="#be4c54" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-salad-icon lucide-salad">
+                                <path d="M7 21h10" />
+                                <path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z" />
+                                <path
+                                    d="M11.38 12a2.4 2.4 0 0 1-.4-4.77 2.4 2.4 0 0 1 3.2-2.77 2.4 2.4 0 0 1 3.47-.63 2.4 2.4 0 0 1 3.37 3.37 2.4 2.4 0 0 1-1.1 3.7 2.51 2.51 0 0 1 .03 1.1" />
+                                <path d="m13 12 4-4" />
+                                <path d="M10.9 7.25A3.99 3.99 0 0 0 4 10c0 .73.2 1.41.54 2" />
+                            </svg>Tagliatelle ao Funghi</td>
+                        <td>Massa fresca com molho cremoso de cogumelos.</td>
+                        <td><mark>R$ 42,00</mark></td>
+                    </tr>
+                    <tr>
+                        <td class="center-icons">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                fill="none" stroke="#be4c54" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-cake-slice-icon lucide-cake-slice">
+                                <path d="M16 13H3" />
+                                <path d="M16 17H3" />
+                                <path
+                                    d="m7.2 7.9-3.388 2.5A2 2 0 0 0 3 12.01V20a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-8.654c0-2-2.44-6.026-6.44-8.026a1 1 0 0 0-1.082.057L10.4 5.6" />
+                                <circle cx="9" cy="7" r="2" />
+                            </svg>Bolo de Cenoura
+                        </td>
+                        <td>Com cobertura de chocolate 70% cacau.</td>
+                        <td><mark>R$ 14,00</mark></td>
+                    </tr>
+                </tbody>
+                <!-- a tag <tfoot> é o rodapé da tabela -->
+                <tfoot>
+
+                </tfoot>
+            </table>
+        </section>
+        <section class="faq" id="faq">
+            <h3>Perguntas frequentes</h3>
+            <aside>
+                <!-- a tag <details> cria um bloco interativo que o usuário pode abrir e fechar para ver ou esconder conteúdos extras -->
+                <details>
+                    <!-- ja a <summary> serve como o título visível ou o resumo clicável desse bloco -->
+                    <summary>É possível fazer reservas para grupos grandes?</summary>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae pariatur ab mollitia,
+                        voluptates
+                        neque nobis repellat, sapiente iusto dolores dicta deserunt ipsum officia maxime animi deleniti
+                        labore quasi, dolorum similique?</p>
+                </details>
+                <details>
+                    <summary>Vocês oferecem opções vegetarianas ou veganas?</summary>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae pariatur ab mollitia,
+                        voluptates
+                        neque nobis repellat, sapiente iusto dolores dicta deserunt ipsum officia maxime animi deleniti
+                        labore quasi, dolorum similique?</p>
+                </details>
+                <details>
+                    <summary>Aceitam pedido para eventos ou confraternizações?</summary>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae pariatur ab mollitia,
+                        voluptates
+                        neque nobis repellat, sapiente iusto dolores dicta deserunt ipsum officia maxime animi deleniti
+                        labore quasi, dolorum similique?</p>
+                </details>
+            </aside>
+        </section>
+
+        <section class="reservation" id="reservation">
+            <article class="form-wrapper">
+                <h2>Reserve sua mesa</h2>
+                <h3><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none"
+                        stroke="#204625" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-users-icon lucide-users">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                        <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                        <circle cx="9" cy="7" r="4" />
+                    </svg>Dados da reserva</h3>
+
+
+                <!-- a tag <form> cria um formulário interativo para coletar dados do usuário -->
+                <form>
+                    <!-- a tag <fieldset> serve para agrupar campos relacionados em um formulário -->
+                    <fieldset class="form">
+
+                        <!-- a tag <legend> serve para criar um título ou rótulo descritivo para um elemento pai <fieldset> -->
+                        <legend>Preencha abaixo:</legend>
+
+                        <div class="input-wrapper">
+                            <!-- a tag <label> define um rótulo ou legenda descritiva para um campo de formulário -->
+                            <label for="name">Nome completo</label>
+                            <!-- a tag <input> cria um campo de entrada de dados para receber informações do usuário -->
+                            <input type="text" placeholder="Seu nome" id="name">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="email">E-mail</label>
+                            <input type="email" placeholder="seu@email.com" id="email">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="tel">Telefone</label>
+                            <input type="text" placeholder="(99) 99999-9999" id="tel">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="date">Data</label>
+                            <input type="date" id="date">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="time">Horário</label>
+                            <input type="time" id="time">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="qtd-ppl">Número de pessoas</label>
+                            <input type="number" id="qtd-ppl">
+                        </div>
+                        <div>
+                            <label for="text-area">Observações(opcional)</label>
+                            <textarea name="" id="text-area" cols="30" rows="10"></textarea>
+                        </div>
+
+                        <a href="#dialog-reserva" class="btn-dialog">Confirmar reserva</a>
+
+                    </fieldset>
+
+                    <!-- a tag <dialog> serve para criar caixas de diálogo nativas,
+                     pop-ups ou janelas modais de forma simples -->
+                    <dialog id="dialog-reserva" class="dialog">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="green"
+                            stroke="#fffaf1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-circle-check-icon lucide-circle-check">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                        <h2>Reserva recebida!</h2>
+                        <p>Em breve entraremos em contato para confirmar os detalhes.</p>
+                        <a href="#" class="btn-fechar" aria-label="Fechar mensagem">
+                            Fechar
+                        </a>
+                    </dialog>
+                </form>
+            </article>
+
+            <aside class="location">
+                <h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-map-pin-icon lucide-map-pin">
+                        <path
+                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>Onde estamos</h3>
+
+                <!-- a tag <address> serve para indicar informações de contato de uma pessoa, grupo ou organização -->
+                <address>
+                    <p>Rua das Flores, 123</p>
+                    <p>Vila Madalena - São Paulo/SP</p>
+                    <p>CEP 05433-000</p>
+
+                    <ul>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone">
+                                <path
+                                    d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+                            </svg>(99) 99999-9999</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail">
+                                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                            </svg>contato@cafeaurora.com.br</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>@cafeaurora.sp</li>
+                    </ul>
+                </address>
+            </aside>
+        </section>
+    </main>
+
+    <!-- a tag <footer> define o rodapé de uma página ou de uma seção específica-->
+    <footer>
+        <div class="footer-up">
+            <figure class="logo">
+                <img src="./assets/logo.png" alt="logo">
+                <p>Café Aurora</p>
+            </figure>
+            <a href="#hero">Voltar ao início</a>
+        </div>
+        <p>&copy; 2026 Café Aurora. Todos os direitos reservados.</p>
+    </footer>
 </body>
 
 </html>
